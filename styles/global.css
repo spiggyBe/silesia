@@ -1,0 +1,33 @@
+:root {
+  --text-color-primary: rgb(30, 30, 30);
+  --text-color-secondary: rgb(0, 255, 47);
+  --background-color-primary: #ffffff;
+  --background-color-secondary: #000000;
+  --background-color-neomorphism: #272525;
+  --box-shadow-card: 0 5px 10px rgba(0, 0, 0, 0.19), 0 0 0 rgba(0, 0, 0, 0.23);
+  --box-shadow-neomorphism: inset -5px -5px 7px #1f1e1e,
+    inset 5px 5px 7px #2f2c2c;
+  --radius-primary: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, sans-serif;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
