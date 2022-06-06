@@ -36,7 +36,7 @@
   display: flex;
   align-items: center;
 
-  span {
+  div {
     width: 35px;
     height: 35px;
     cursor: pointer;
@@ -94,9 +94,9 @@
   line-height: 1.6rem;
   vertical-align: middle;
   font-weight: 700;
-  transition: 0.3s;
+  transition: 0.35s;
 
-  &:hover {
+  &.normallA:hover {
     color: var(--text-color-secondary);
   }
 }
