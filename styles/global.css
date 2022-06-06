@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600&family=Mina:wght@400;700&display=swap");
+/*font-family: 'Comfortaa', cursive, sans-serif;
+font-family: 'Mina', sans-serif;*/
+
 :root {
   --text-color-primary: rgb(30, 30, 30);
   --text-color-secondary: rgb(0, 255, 47);
@@ -18,10 +22,8 @@
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: Verdana, sans-serif;
-  overflow: hidden;
+  font-size: 12px;
+  font-family: "Comfortaa", sans-serif;
 }
 
 a {
@@ -30,4 +32,13 @@ a {
 
 li {
   list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Mina", sans-serif;
 }

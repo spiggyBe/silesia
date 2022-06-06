@@ -1,0 +1,34 @@
+.navContainer {
+  width: 100%;
+  height: 100px;
+  padding: 15px 60px;
+  background-color: var(--background-color-neomorphism);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logoWrapper {
+    cursor: pointer;
+  }
+
+  .menuList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+
+    li {
+      padding: 0 20px;
+      margin-right: 20px;
+      color: var(--background-color-primary);
+
+      a {
+        color: var(--background-color-primary);
+        font-size: 2rem;
+      }
+    }
+    li:last-child {
+      margin-right: 0;
+    }
+  }
+}

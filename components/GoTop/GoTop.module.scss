@@ -1,0 +1,12 @@
+.goTop {
+  width: 30px;
+  height: 30px;
+  background-color: var(--text-color-secondary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
