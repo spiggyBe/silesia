@@ -23,7 +23,7 @@ const MetaTags = ({
       <meta charSet="utf-8" />
       <meta name="twitter:card" content="summary" />
       <meta name="whatsup:card" content="summary" />
-      <link rel="icon" href="/images/favicon.png" />
+      <link rel="icon" href="/images/favicon.webp" />
     </Head>
   )
 }
