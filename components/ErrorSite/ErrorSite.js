@@ -17,9 +17,9 @@ const ErrorSite = () => {
   return (
     <main className={styles.imgWrapper}>
       <Image
-        src="/images/logo-silesia-sites.svg"
-        width={300}
-        height={300}
+        src="/images/logo.webp"
+        width={160}
+        height={160}
         priority="lazy"
         alt="logo silesia sites produkcja lepszych stron internetowych SEO"
       />
@@ -27,13 +27,15 @@ const ErrorSite = () => {
         Produkcja lepszych SEO i samo-pozycjonujących się stron internetowych ze
         Śląska
       </h1>
+      <br />
       <h2>
         Jesteś na niezidentyfikowanej podstronie w domenie silesiasites.pl
       </h2>
+      <br />
       <h3>
         Strażnik kopalni duch skarbek za 10 sekund odeśle Cię na stronę główną
       </h3>
-      <Link href="/" passhref>
+      <Link href="/">
         <button className={styles.redirectBtn}> Strona główna</button>
       </Link>
     </main>

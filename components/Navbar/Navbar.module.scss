@@ -1,34 +1,109 @@
-.navContainer {
+.container {
   width: 100%;
+  -webkit-box-shadow: 0 4px 6px -6px var(--text-color-primary);
+  -moz-box-shadow: 0 4px 6px -6px var(--text-color-primary);
+  box-shadow: 0 4px 6px -6px var(--text-color-primary);
+}
+
+.navContainer {
+  max-width: 1300px;
+  margin: 0 auto;
   height: 100px;
   padding: 15px 60px;
-  background-color: var(--background-color-neomorphism);
+  background-color: #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  .logoWrapper {
-    cursor: pointer;
+  @media screen and (max-width: 468px) {
+    padding: 0 10px;
+    height: 60px;
   }
+}
 
-  .menuList {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
+.logoWrapper {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
 
-    li {
-      padding: 0 20px;
-      margin-right: 20px;
-      color: var(--background-color-primary);
+  @media screen and (max-width: 468px) {
+    width: 60px;
+    height: 60px;
+  }
+}
 
-      a {
-        color: var(--background-color-primary);
-        font-size: 2rem;
+.menu {
+  display: flex;
+  align-items: center;
+
+  span {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    border: 1px solid var(--text-color-secondary);
+    display: none;
+
+    @media screen and (max-width: 900px) {
+      display: block;
+    }
+
+    @media screen and (max-width: 468px) {
+      width: 25px;
+      height: 25px;
+    }
+
+    svg {
+      color: var(--text-color-secondary);
+      width: 35px;
+      height: 35px;
+      display: none;
+      cursor: pointer;
+
+      @media screen and (max-width: 900px) {
+        display: block;
+      }
+      @media screen and (max-width: 468px) {
+        width: 25px;
+        height: 25px;
       }
     }
-    li:last-child {
-      margin-right: 0;
-    }
   }
+}
+
+.menuList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
+
+.item {
+  padding: 15px 30px;
+  margin-right: 20px;
+}
+
+.item:last-child {
+  margin-right: 0;
+}
+
+.normallA {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  vertical-align: middle;
+  font-weight: 700;
+  transition: 0.3s;
+
+  &:hover {
+    color: var(--text-color-secondary);
+  }
+}
+
+.active {
+  color: var(--text-color-secondary);
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  vertical-align: middle;
 }
