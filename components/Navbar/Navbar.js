@@ -1,7 +1,7 @@
-import React, { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { useRouter } from "next/router"
+import Hamburger from "../Hamburger/Hamburger"
 
 import styles from "./Navbar.module.scss"
 
@@ -24,27 +24,27 @@ const menu = [
   },
 ]
 
+const titleLogo = "<silesia Sites/>"
+
 const Navbar = () => {
   const router = useRouter()
-  const [toggle, setToggle] = useState(false)
-
-  const handleToggle = () => {
-    setToggle(!toggle)
-  }
 
   return (
     <header className={styles.container}>
       <nav className={styles.navContainer}>
         <Link href="/">
-          <div className={styles.logoWrapper}>
-            <Image
-              src="/images/logo.webp"
-              width={100}
-              height={100}
-              layout="responsive"
-              objectFit="cover"
-              alt="logo silesia sites produkcja lepszych stron SEO"
-            />
+          <div className={styles.logoPosition}>
+            <div className={styles.logoWrapper}>
+              <Image
+                src="/images/logo.webp"
+                width={100}
+                height={100}
+                layout="responsive"
+                objectFit="cover"
+                alt="logo silesia sites produkcja lepszych stron SEO"
+              />
+            </div>
+            <span>{titleLogo}</span>
           </div>
         </Link>
         <div className={styles.menu}>
@@ -55,7 +55,7 @@ const Navbar = () => {
                   <a
                     className={
                       router.pathname == el.path
-                        ? `${styles.active}`
+                        ? `${styles.activeLink}`
                         : `${styles.normallA}`
                     }
                   >
@@ -65,15 +65,7 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div
-            id={styles.hamburger6}
-            className={`${styles.hamburger} ${toggle ? styles.isActive : ""}`}
-            onClick={handleToggle}
-          >
-            <span className={styles.line}></span>
-            <span className={styles.line}></span>
-            <span className={styles.line}></span>
-          </div>
+          <Hamburger />
         </div>
       </nav>
     </header>

@@ -3,10 +3,9 @@
 font-family: 'Mina', sans-serif;*/
 
 :root {
-  --text-color-primary: rgb(69, 67, 67);
+  --text-color-primary: rgb(30, 30, 30);
   --text-color-secondary: #39ff14;
   --background-color-primary: #ffffff;
-  --background-color-secondary: rgb(30, 30, 30);
   --box-shadow-card: 0 5px 10px rgba(0, 0, 0, 0.19), 0 0 0 rgba(0, 0, 0, 0.23);
   --box-shadow-neomorphism: inset -7px -7px 12px #161616,
     inset 7px 7px 12px #262626;
