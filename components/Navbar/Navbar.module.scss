@@ -1,12 +1,12 @@
 .container {
   width: 100%;
-  -webkit-box-shadow: 0 4px 6px -6px var(--text-color-primary);
-  -moz-box-shadow: 0 4px 6px -6px var(--text-color-primary);
-  box-shadow: 0 4px 6px -6px var(--text-color-primary);
+  -webkit-box-shadow: 0 4px 6px -6px var(--text-color-secondary);
+  -moz-box-shadow: 0 4px 6px -6px var(--text-color-secondary);
+  box-shadow: 0 4px 6px -6px var(--text-color-secondary);
 }
 
 .navContainer {
-  max-width: 1300px;
+  max-width: 1500px;
   margin: 0 auto;
   height: 100px;
   padding: 15px 60px;
@@ -27,7 +27,15 @@
   span {
     font-size: 3rem;
     font-weight: 700;
-    color: var(--text-color-secondary);
+    color: var(--text-color-primary);
+
+    @media screen and (max-width: 1015px) {
+      font-size: 2rem;
+    }
+
+    @media screen and (max-width: 469px) {
+      font-size: 1.5rem;
+    }
   }
 }
 

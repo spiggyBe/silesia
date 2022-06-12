@@ -1,4 +1,4 @@
-/*Hamburger icon*/
+/*Hamburger whole icon*/
 
 .hamburger {
   height: 40px;
@@ -6,18 +6,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  display: none;
+
+  @media screen and (max-width: 900px) {
+    display: block;
+  }
 }
 
 .hamburger:hover {
   cursor: pointer;
 }
 
+.centerLines {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .line {
   width: 30px;
   height: 2px;
-  background-color: var(--text-color-secondary);
+  background-color: var(--text-color-primary);
   display: block;
-
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;

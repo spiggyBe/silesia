@@ -11,7 +11,7 @@ const Hamburger = () => {
   return (
     <div className={styles.hamburger}>
       <div
-        className={` ${toggle ? styles.isActive : ""}`}
+        className={`${styles.centerLines} ${toggle ? styles.isActive : ""}`}
         onClick={handleToggle}
       >
         <span className={styles.line}></span>

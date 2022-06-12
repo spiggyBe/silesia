@@ -24,7 +24,7 @@ const menu = [
   },
 ]
 
-const titleLogo = "<silesia Sites/>"
+const titleLogo = "<silesiaSites/>"
 
 const Navbar = () => {
   const router = useRouter()
