@@ -2,10 +2,8 @@ import React, { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { useRouter } from "next/router"
-import { RiMenu4Fill, RiCloseFill } from "react-icons/ri"
 
 import styles from "./Navbar.module.scss"
-import { motion } from "framer-motion"
 
 const menu = [
   {
@@ -31,7 +29,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false)
 
   const handleToggle = () => {
-    setToggle(true)
+    setToggle(!toggle)
   }
 
   return (
@@ -67,34 +65,14 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div>
-            {toggle ? (
-              <RiCloseFill onClick={handleToggle} />
-            ) : (
-              <RiMenu4Fill onClick={handleToggle} /> && (
-                <motion.div
-                  whileInView={{ x: [300, 0] }}
-                  transition={{ duration: 0.85, ease: "easeOut" }}
-                >
-                  <RiCloseFill onClick={handleToggle} />
-                  {menu.map((el, i) => (
-                    <li key={i} className={styles.item} onClick={handleToggle}>
-                      <Link href={el.path} passHref>
-                        <a
-                          className={
-                            router.pathname == el.path
-                              ? `${styles.active}`
-                              : `${styles.normallA}`
-                          }
-                        >
-                          {el.link}
-                        </a>
-                      </Link>
-                    </li>
-                  ))}
-                </motion.div>
-              )
-            )}
+          <div
+            id={styles.hamburger6}
+            className={`${styles.hamburger} ${toggle ? styles.isActive : ""}`}
+            onClick={handleToggle}
+          >
+            <span className={styles.line}></span>
+            <span className={styles.line}></span>
+            <span className={styles.line}></span>
           </div>
         </div>
       </nav>
