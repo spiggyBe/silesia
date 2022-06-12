@@ -1,0 +1,29 @@
+.logoPosition {
+  display: flex;
+  align-items: center;
+
+  span {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-color-primary);
+
+    @media screen and (max-width: 1015px) {
+      font-size: 2rem;
+    }
+
+    @media screen and (max-width: 469px) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.logoWrapper {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+
+  @media screen and (max-width: 468px) {
+    width: 60px;
+    height: 60px;
+  }
+}

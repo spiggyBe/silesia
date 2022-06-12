@@ -1,30 +1,9 @@
 import Link from "next/link"
-import Image from "next/image"
 import { useRouter } from "next/router"
+import Logo from "../Logo/Logo"
 import Hamburger from "../Hamburger/Hamburger"
-
+import { menu } from "../../utils/menuData"
 import styles from "./Navbar.module.scss"
-
-const menu = [
-  {
-    link: "silesia",
-    path: "/",
-  },
-  {
-    link: "oferta",
-    path: "/oferta",
-  },
-  {
-    link: "blog",
-    path: "/blog",
-  },
-  {
-    link: "kontakt",
-    path: "/kontakt",
-  },
-]
-
-const titleLogo = "<silesiaSites/>"
 
 const Navbar = () => {
   const router = useRouter()
@@ -32,21 +11,7 @@ const Navbar = () => {
   return (
     <header className={styles.container}>
       <nav className={styles.navContainer}>
-        <Link href="/">
-          <div className={styles.logoPosition}>
-            <div className={styles.logoWrapper}>
-              <Image
-                src="/images/logo.webp"
-                width={100}
-                height={100}
-                layout="responsive"
-                objectFit="cover"
-                alt="logo silesia sites produkcja lepszych stron SEO"
-              />
-            </div>
-            <span>{titleLogo}</span>
-          </div>
-        </Link>
+        <Logo titleLogo={"<silesiaSites/>"} />
         <div className={styles.menu}>
           <ul className={styles.menuList}>
             {menu.map((el, i) => (
